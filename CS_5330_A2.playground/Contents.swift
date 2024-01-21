@@ -24,7 +24,7 @@ func Payment(loanAmount: Int, numberOfPayments: Int, interestRate: Float) -> Flo
     let interestRateToDecimal: Float = interestRate / 100.0;
     
     let fractionTop: Float = pow((interestRateToDecimal + 1.0),totalNumberOfPayments) * interestRateToDecimal;
-    let fractionBottom: Float = pow((interestRateToDecimal + 1.0), totalNumberOfPayments) - 1;
+    let fractionBottom: Float = pow((interestRateToDecimal + 1.0),totalNumberOfPayments) - 1;
     
     let fraction: Float = fractionTop / fractionBottom;
     
@@ -34,4 +34,4 @@ func Payment(loanAmount: Int, numberOfPayments: Int, interestRate: Float) -> Flo
 }
 
 print(Payment(loanAmount: 20000, numberOfPayments: 2, interestRate: (4.4/12.0)));
-print(Payment(loanAmount: 150000, numberOfPayments: 30, interestRate: 5));
+print(Payment(loanAmount: 150000, numberOfPayments: 30, interestRate: 5.0));
